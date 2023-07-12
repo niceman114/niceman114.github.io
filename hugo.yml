@@ -1,0 +1,67 @@
+baseURL: https://niceman114.github.io/
+defaultContentLanguage: en
+enableEmoji: true
+enableRobotsTXT: true
+googleAnalytics: G-RNY79TRE5P
+languageCode: ko-kr
+paginate: 10
+theme: mainroad
+timeZone: Asia/Seoul
+title: Just log it
+
+author:
+  name: Dean
+  bio: 대한민국 개발자
+  avatar: img/avatar.jpg
+
+params:
+  authorbox: true
+  copyright: Dean Oh
+  dateformat: 2006-01-02
+  description: 개발 관련 기록 저장소
+  logo:
+    image: img/avatar.jpg
+    subtitle: "정리하자. 기록하자. 공유하자."
+  mainSections:
+    - posts
+  opengraph: true
+  pager: true
+  post_meta:
+    - date
+    - categories
+  readmore: true
+  schema: true
+  sidebar:
+    home: right
+    list: right
+    single: right
+    widgets:
+      - languages
+      - search
+      - categories
+      - taglist
+      - recent
+      - social
+  style:
+    vars:
+      highlightColor: "#e22d30"
+  toc: true
+  thumbnail:
+    visibility:
+      - list
+      - post
+  twitter_cards: true
+  widgets:
+    categories_counter: true
+    recent_num: 5
+    tags_counter: true
+    social:
+      email: niceman114@gmail.com
+      facebook: niceman114
+      github: niceman114
+      instagram: niceman114
+      twitter: niceman_114
+      custom:
+        - title: Tistory
+          url: https://niceman114.tistory.com
+          icon: svg/author.svg
