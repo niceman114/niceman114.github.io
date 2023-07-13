@@ -1,6 +1,6 @@
 ---
 title: "Spring Boot에서 Jacoco 세팅하기"
-description: "Jacoco 세팅하는 방법에 대해 기술합니다"
+description: "Spring Boot 프로젝트에서 Jacoco 세팅하는 방법에 대해 기술합니다"
 date: 2023-07-12
 draft: false
 categories:
@@ -14,12 +14,14 @@ tags:
 authorbox: true
 ---
 
-## jacoco가 뭔가요?
+## 들어가며
+
 Java 프로젝트를 개발하면서 테스트 케이스들을 만들게 되는데, 테스트 Coverage 리포트를 자동으로 생성해 주는 툴입니다.
 이름이 왜 `jacoco`인가 했더니, Java Code Coverage의 줄임말이네요. ㅎㅎ
 간단한 몇 가지 설정으로 금방 결과물 확인이 가능하니, 아직 망설이고 계신 분들은 꼭 프로젝트에 적용해 보시길 권장 드려요! 😄
 
 ## 설정방법: gradle 기준
+
 1. build.gradle 파일을 다음과 같이 변경합니다. (diff만 보시려면 [여기 클릭](https://github.com/niceman114/how-to-use-jacoco/commit/2ec752f147c4c069f06c97332c885668b217080a?diff=unified))
     - As-is
       ```groovy:build.gradle
