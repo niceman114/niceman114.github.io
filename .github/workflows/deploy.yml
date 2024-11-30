@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - test
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            build
+            .cache
+          key: ${{ runner.os }}-build-${{ hashFiles('build') }}
+          restore-keys: |
+            ${{ runner.os }}-build-
+      - name: Build
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
